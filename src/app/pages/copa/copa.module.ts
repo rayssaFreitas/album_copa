@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AlbumComponent } from './album/album.component';
+import { CopaRoutingModule } from './copa.routing';
 
 
 
@@ -9,7 +10,8 @@ import { AlbumComponent } from './album/album.component';
     AlbumComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CopaRoutingModule
   ]
 })
 export class CopaModule { }
