@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MainModule } from './components/main/main.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AuthGuard } from './core/middleware/AuthGuard';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AuthGuard } from './core/middleware/AuthGuard';
     AppRoutingModule,
     BrowserAnimationsModule,
     MainModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDialogModule
     ],
   providers: [
     AuthGuard

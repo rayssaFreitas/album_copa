@@ -1,0 +1,19 @@
+<mat-card class="py-15" fxFlex="7" fxFlex.sm="">
+    <mat-card-content fxFlex fxLayout="column" fxLayoutAlign="space-around center">
+        <section>
+            <p>
+                {{nomePais}}
+            </p>
+            <p class="pt-10">{{figurinha.numero}}</p>
+        </section>
+    </mat-card-content>
+    <mat-card-footer fxFlex fxLayout="column" fxLayoutAlign="space-around center">
+        <section>
+            <a (click)="abrirTrocaDialog()">
+                <span>
+                    FIFA WORLD CUP
+                </span>
+            </a>
+        </section>
+    </mat-card-footer>
+</mat-card>

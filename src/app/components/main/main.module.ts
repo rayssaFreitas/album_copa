@@ -6,6 +6,8 @@ import { HeaderComponent } from './header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { routing } from 'src/app/app-routing.module';
 
+import {MatCardModule} from '@angular/material/card';
+
 @NgModule({
   declarations: [
     MainComponent,
@@ -16,6 +18,9 @@ import { routing } from 'src/app/app-routing.module';
     routing,
     CommonModule,
     FlexLayoutModule,
+
+    //Material
+    MatCardModule
   ],
   exports: [
     MainComponent,
