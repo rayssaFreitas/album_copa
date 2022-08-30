@@ -1,7 +1,5 @@
 import { Component, EventEmitter, INJECTOR, Input, OnInit, Output } from '@angular/core';
 import { Album, Figurinha, Pais } from 'src/app/core/middleware/Model/album.model';
-import { DialogService } from 'src/app/services/dialog.service';
-import { TrocaDialogComponent } from '../troca-dialog/troca-dialog.component';
 
 @Component({
   selector: 'app-figurinha',
@@ -36,15 +34,8 @@ export class FigurinhaComponent implements OnInit {
     this.nomePaisChange.emit(this.nomePaisValue);
   }
 
-  constructor(
-    public dialogService: DialogService
-
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
-  }
-  
-  public abrirTrocaDialog(){
-    this.dialogService.abrirDialogSide(TrocaDialogComponent);
   }
 }

@@ -23,6 +23,30 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+.container{
+    padding: 1.3rem 3rem;
+}
+
+h1{
+	font-size: 24px;
+}
+
 b{
     font-weight: bold;
+}
+
+p{
+    font-size: 18px;
+    margin: 0px;
+}
+
+span{
+    font-size: 12px;
+}
+
+.app-figurinha{
+    background: #F0EDED;
+    border-radius: 3px;
+    text-align: center;
+    padding: 0px;
 }

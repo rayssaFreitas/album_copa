@@ -11,6 +11,11 @@ export class DialogService {
     private dialog: MatDialog
   ) { }
 
+  public abrirDialogCenter<T>(component: ComponentType<T>){
+    const dialogConfig = new MatDialogConfig();
+    this.dialog.open(component, dialogConfig);
+  }
+
   public abrirDialogSide<T>(component: ComponentType<T>) {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.maxHeight = "100%";

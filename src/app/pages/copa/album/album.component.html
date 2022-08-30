@@ -1,42 +1,23 @@
-<!-- <div fxLayout="column" >
-    <div *ngFor="let pais of album.paises">
-        <div fxLayout="row" class="my-10">
-            <h1>{{pais.nome}}</h1>
-            <br/>
-            <div fxLayout="row" fxLayoutAlign="space-around center" class="w-100">
-                <mat-card class="py-15" fxFlex="7" fxFlex.sm="" *ngFor="let figurinha of pais.figurinhas">
-                    <mat-card-content fxFlex fxLayout="column" fxLayoutAlign="space-around center">
-                        <section>
-                            <p>
-                                {{pais.nome}}
-                            </p>
-                            <p class="pt-10">{{figurinha.numero}}</p>
-                        </section>
-                        <section>
-                            <a (click)="abrirTrocaDialog()">
-                                <span>
-                                    FIFA WORLD CUP
-                                </span>
-                            </a>
-                        </section>
-                    </mat-card-content>
-                    <br/>
-                </mat-card>
-            </div>
-        </div>
+<div fxLayout="column" class="container">
+    <div  class="my-20">
+        <h1>
+            Meu Album
+        </h1>
     </div>
-</div> -->
-
-<div fxLayout="column" >
-    <div *ngFor="let pais of album.paises">
-        <div fxLayout="row" class="my-10">
-            <h1>{{pais.nome}}</h1>
-            <br/>
-            <div fxLayout="row" fxLayoutAlign="space-around center" class="w-100" *ngFor="let figurinha of pais.figurinhas; let i = index">
-                <app-figurinha
-                    [(figurinha)] = pais.figurinhas[i]
-                    [(nomePais)] = pais.nome>
-                </app-figurinha>
+    <div class="album pd-20" *ngFor="let pais of album.paises">
+        <div fxLayout="column" class="my-10">
+            <div>
+                <h1>{{pais.nome}}</h1>
+            </div>
+            <div fxLayout="row" class="container">
+                <div class="w-100 open-dialog" *ngFor="let figurinha of pais.figurinhas; let i = index">
+                    <mat-card fxFlex="75" fxFlex.sm="" fxLayoutAlign="space-around" (click)="abrirInfosDialog()" class="app-figurinha py-15">
+                        <app-figurinha fxLayout="column" 
+                            [(figurinha)] = pais.figurinhas[i]
+                            [(nomePais)] = pais.nome>
+                        </app-figurinha>
+                    </mat-card>
+                </div>
             </div>
         </div>
     </div>

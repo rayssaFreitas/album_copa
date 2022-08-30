@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DialogService } from 'src/app/services/dialog.service';
 import { TrocaDialogComponent } from '../troca-dialog/troca-dialog.component';
 import { Album, Figurinha, Pais } from '../../../core/middleware/Model/album.model';
+import { InfosDialogComponent } from '../infos-dialog/infos-dialog.component';
 
 @Component({
   selector: 'app-album',
@@ -57,7 +58,11 @@ export class AlbumComponent implements OnInit {
     return  figurinhas;
   }
 
-  public abrirTrocaDialog(){
-    this.dialogService.abrirDialogSide(TrocaDialogComponent);
+  // public abrirTrocaDialog(){
+  //   this.dialogService.abrirDialogSide(TrocaDialogComponent);
+  // }
+  
+  public abrirInfosDialog(){
+    this.dialogService.abrirDialogCenter(InfosDialogComponent);
   }
 }

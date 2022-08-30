@@ -1,30 +1,9 @@
-<!-- <div>
-    <section>
-        <h1>Quem tem?</h1>
-        <div>
-            <mat-card class="py-15" fxFlex="7" fxFlex.sm="">
-                <mat-card-content fxFlex fxLayout="column" fxLayoutAlign="space-around center">
-                    <section>
-                        <p>
-                            {{pais.nome}}
-                        </p>
-                        <p class="pt-10">{{figurinha.numero}}</p>
-                    </section>
-                    <section>
-                            <span>
-                                FIFA WORLD CUP
-                            </span>
-                    </section>
-                </mat-card-content>
-                <br/>
-            </mat-card>
-        </div>
-        </section>
-</div> -->
-
 <div>
-    <section>
+    <section class="cabecalho" fxLayoutAlign="space-between center">
         <h1>Quem tem?</h1>
+        <mat-card class="app-figurinha" fxFlex="15" fxFlex.sm="">
+            <app-figurinha class="app-figurinha" fxFlex="15" fxFlex.sm=""></app-figurinha>
+        </mat-card>
     </section>
 
     <section class="card-pessoa">
@@ -32,22 +11,31 @@
             <div fxLayout="row" fxLayoutAlign="space-between">
                 <mat-card-title>Ciclano</mat-card-title>
                 <div class="unidade">
-                    <p>
-                        SP - Unidade Santana
-                    </p>
+                    <span>
+                        <b>SP - Unidade Santana</b>
+                    </span>
                 </div>
             </div>
-            <mat-card-content fxLayout="column" fxLayoutAlign="center space-between" >
-                <div fxLayout="row">
-                    <h4>Para troca</h4>
-                    <h4>Precisa</h4>
+            <mat-card-content fxLayout="column" >
+                <div fxLayout="row" fxLayoutAlign="space-between">
+                    <p>
+                        Para troca
+                    </p>
+                    <p>
+                        Precisa
+                    </p>
                 </div>
 
-                <div fxLayout="row">
-                    <p>Vem as cartas</p>
-                    <div fxLayout="column">
-                        <p>Vem as cartas</p>
-                        <a>Ver mais -></a>
+                <div class="troca" fxLayout="row" fxLayoutAlign="space-between">
+                    <div>
+                        <mat-card class="app-figurinha" fxFlex="50" fxFlex.sm="">
+                            <app-figurinha></app-figurinha>
+                        </mat-card>
+                    </div>
+                    <div>
+                        <mat-card class="app-figurinha" fxFlex="50" fxFlex.sm="">
+                            <app-figurinha class="app-figurinha"></app-figurinha>
+                        </mat-card>
                     </div>
                     </div>
             </mat-card-content>

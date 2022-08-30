@@ -9,6 +9,8 @@ import { MainModule } from './components/main/main.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AuthGuard } from './core/middleware/AuthGuard';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     BrowserAnimationsModule,
     MainModule,
     FlexLayoutModule,
-    MatDialogModule
+
+    // Material
+    MatDialogModule,
+    MatIconModule
     ],
   providers: [
     AuthGuard

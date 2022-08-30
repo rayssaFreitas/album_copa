@@ -1,5 +1,20 @@
-p, h4{
-    margin: 0px;
+@import '/src/styles.scss';
+
+.w-100{
+    width: 100%;
+}
+.my-10{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.my-20{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pd-20{
+    padding: 20px;
 }
 
 .py-15{
@@ -7,35 +22,15 @@ p, h4{
     padding-bottom: 15px;
 }
 
-.pt-10{
-    padding-top: 10px;
+.album{
+    background-color: #D9D9D9;
+    border-radius: 3px;
 }
 
-.w-100{
-    width: 100%;
-}
-
-.my-10{
-    margin-top: 10px;
-    margin-bottom: 10px;
+.open-dialog{
+    cursor: pointer;
 }
 
 mat-card{
-    height: 140px;
-    background: #F0EDED;
-    border-radius: 2px;
-    text-align: center;
-    padding: 0px;
-}
-
-mat-card-content{
-    margin-bottom: 0px;
-}
-
-p{
-    font-size: 18px;
-}
-
-span{
-    font-size: 12px;
+    height: 150px;
 }
