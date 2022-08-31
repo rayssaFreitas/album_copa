@@ -7,6 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { routing } from 'src/app/app-routing.module';
 
 import {MatCardModule} from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {MatCardModule} from '@angular/material/card';
     FlexLayoutModule,
 
     //Material
-    MatCardModule
+    MatCardModule,
+    MatIconModule
   ],
   exports: [
     MainComponent,

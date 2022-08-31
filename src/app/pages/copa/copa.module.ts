@@ -4,7 +4,6 @@ import { AlbumComponent } from './album/album.component';
 import { CopaRoutingModule } from './copa.routing';
 import { TrocaDialogComponent } from './troca-dialog/troca-dialog.component';
 import { FigurinhaComponent } from './figurinha/figurinha.component';
-import { InfosDialogComponent } from './infos-dialog/infos-dialog.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 
@@ -19,8 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
   declarations: [
     AlbumComponent,
     TrocaDialogComponent,
-    FigurinhaComponent,
-    InfosDialogComponent
+    FigurinhaComponent
   ],
   imports: [
     CommonModule,

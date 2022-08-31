@@ -29,6 +29,8 @@ time, mark, audio, video {
 
 h1{
 	font-size: 24px;
+    color: #440625;
+    font-weight: bold;
 }
 
 b{
@@ -45,7 +47,9 @@ span{
 }
 
 .app-figurinha{
-    background: #F0EDED;
+    background: #93CFC7;
+    box-shadow: 4px 2px 1px #440625;
+    color: #FFF;
     border-radius: 3px;
     text-align: center;
     padding: 0px;

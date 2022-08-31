@@ -21,19 +21,6 @@ export class FigurinhaComponent implements OnInit {
     this.figurinhaChange.emit(this.figurinhaValue);
   }
 
-  // nomePais
-  nomePaisValue!: string;
-  @Output()
-  nomePaisChange = new EventEmitter<string>();
-  @Input()
-  get nomePais() {
-    return this.nomePaisValue;
-  }
-  set nomePais(val) {
-    this.nomePaisValue = val;
-    this.nomePaisChange.emit(this.nomePaisValue);
-  }
-
   constructor() { }
 
   ngOnInit(): void {

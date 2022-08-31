@@ -2,7 +2,8 @@
     <section class="cabecalho" fxLayoutAlign="space-between center">
         <h1>Quem tem?</h1>
         <mat-card class="app-figurinha" fxFlex="15" fxFlex.sm="">
-            <app-figurinha class="app-figurinha" fxFlex="15" fxFlex.sm=""></app-figurinha>
+            <app-figurinha>
+            </app-figurinha>
         </mat-card>
     </section>
 
@@ -16,28 +17,19 @@
                     </span>
                 </div>
             </div>
-            <mat-card-content fxLayout="column" >
-                <div fxLayout="row" fxLayoutAlign="space-between">
-                    <p>
-                        Para troca
-                    </p>
+            <mat-card-content fxLayout="column" class="pt-20">
+                <div>
                     <p>
                         Precisa
                     </p>
                 </div>
 
-                <div class="troca" fxLayout="row" fxLayoutAlign="space-between">
-                    <div>
-                        <mat-card class="app-figurinha" fxFlex="50" fxFlex.sm="">
-                            <app-figurinha></app-figurinha>
-                        </mat-card>
-                    </div>
-                    <div>
-                        <mat-card class="app-figurinha" fxFlex="50" fxFlex.sm="">
-                            <app-figurinha class="app-figurinha"></app-figurinha>
-                        </mat-card>
-                    </div>
-                    </div>
+                <div class="troca pt-10" fxLayout="row" fxLayoutAlign="space-between">
+                    <mat-card class="app-figurinha" fxFlex="10" fxFlex.sm="">
+                        <app-figurinha>
+                        </app-figurinha>
+                    </mat-card>
+                </div>
             </mat-card-content>
           </mat-card>
     </section>

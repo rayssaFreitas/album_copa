@@ -11,11 +11,19 @@
             </div>
             <div fxLayout="row" class="container">
                 <div class="w-100 open-dialog" *ngFor="let figurinha of pais.figurinhas; let i = index">
-                    <mat-card fxFlex="75" fxFlex.sm="" fxLayoutAlign="space-around" (click)="abrirInfosDialog()" class="app-figurinha py-15">
-                        <app-figurinha fxLayout="column" 
-                            [(figurinha)] = pais.figurinhas[i]
-                            [(nomePais)] = pais.nome>
+                    <mat-card fxFlex="75" fxFlex.sm="" fxLayout="column" (click)="abrirTrocaDialog(pais.figurinhas[i])" class="app-figurinha py-15">
+                        <app-figurinha 
+                            [(figurinha)] = pais.figurinhas[i]>
                         </app-figurinha>
+                        <mat-card-footer fxFlex  fxLayoutAlign="space-around center">
+                            <section>
+                                <a>
+                                    <span>
+                                        <b>FIFA WORLD CUP</b>
+                                    </span>
+                                </a>
+                            </section>
+                        </mat-card-footer>
                     </mat-card>
                 </div>
             </div>

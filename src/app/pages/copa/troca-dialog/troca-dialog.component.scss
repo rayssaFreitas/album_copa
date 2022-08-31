@@ -1,13 +1,47 @@
 @import '/src/styles.scss';
 
+.pt-10{
+    padding-top: 10px;
+}
+
+.pt-20{
+    padding-top: 20px;
+}
+
 .cabecalho .app-figurinha{
     height: 90px;
 }
 
 .card-pessoa{
     margin-top: 50px;
+    box-shadow: 1px 1px 2px #93cfc7;
+    border: 1px solid #54BBB1;
+    border-radius: 2px;
 }
 
 .troca .app-figurinha{
-    height: 50px;
+    height: 60px;
 }
+
+// #2095CF
+
+// Lightning Yellow
+// #FAC71F
+
+// Melanzane
+// #440625
+
+// Seagull
+// #7ECBE9
+
+// New York Pink
+// #D58C7A
+
+// Livid Brown
+// #422632
+
+// Claret
+// #931F3D
+
+// Iron
+// #D9DADA

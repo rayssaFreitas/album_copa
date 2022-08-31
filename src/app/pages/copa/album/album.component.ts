@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { DialogService } from 'src/app/services/dialog.service';
 import { TrocaDialogComponent } from '../troca-dialog/troca-dialog.component';
 import { Album, Figurinha, Pais } from '../../../core/middleware/Model/album.model';
-import { InfosDialogComponent } from '../infos-dialog/infos-dialog.component';
 
 @Component({
   selector: 'app-album',
@@ -27,14 +26,14 @@ export class AlbumComponent implements OnInit {
     albumAux.paises = [];
 
     const paisesCopa = [];
-    paisesCopa.push({nomePais:'BRA'})
-    paisesCopa.push({nomePais:'MAR'})
+    paisesCopa.push({nomePais:'BRAZIL', siglaPais: 'BRA'})
+    paisesCopa.push({nomePais:'MOROCCO', siglaPais: 'MAR'})
 
     paisesCopa.forEach(pc => {
       const paisesAux = new Pais();
 
       paisesAux.nome = pc.nomePais;
-      paisesAux.figurinhas = this.createFigurinha();
+      paisesAux.figurinhas = this.createFigurinha(pc.siglaPais);
 
       albumAux.paises.push(paisesAux);
     });
@@ -42,7 +41,7 @@ export class AlbumComponent implements OnInit {
     return albumAux;
   }
 
-  public createFigurinha() : Array<Figurinha> {
+  public createFigurinha(siglaPais: string) : Array<Figurinha> {
     const totalFigurinhas = 11;
     const figurinhas: Array<Figurinha> = [];
 
@@ -51,6 +50,7 @@ export class AlbumComponent implements OnInit {
       figurinha.numero = i;
       figurinha.empenhadas = 0;
       figurinha.quantidades = 0;
+      figurinha.siglaPais = siglaPais;
 
       figurinhas.push(figurinha);
     }
@@ -58,11 +58,7 @@ export class AlbumComponent implements OnInit {
     return  figurinhas;
   }
 
-  // public abrirTrocaDialog(){
-  //   this.dialogService.abrirDialogSide(TrocaDialogComponent);
-  // }
-  
-  public abrirInfosDialog(){
-    this.dialogService.abrirDialogCenter(InfosDialogComponent);
+  public abrirTrocaDialog(figurinha: Figurinha){
+    this.dialogService.abrirDialogSide(TrocaDialogComponent);
   }
 }
