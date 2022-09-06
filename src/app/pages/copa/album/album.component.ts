@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DialogService } from 'src/app/services/dialog.service';
 import { TrocaDialogComponent } from '../troca-dialog/troca-dialog.component';
 import { Album, Figurinha, Pais } from '../../../core/middleware/Model/album.model';
+import { BehaviorSubject } from 'rxjs';
+import { FigurinhaService } from 'src/app/services/figurinha.service';
 
 @Component({
   selector: 'app-album',
@@ -14,11 +16,18 @@ export class AlbumComponent implements OnInit {
   public paises!: Pais;
 
   constructor(
-    public dialogService: DialogService
+    public dialogService: DialogService,
+    private figurinhaService: FigurinhaService
   ) { }
+
+  public statusFigurinha = new BehaviorSubject<Figurinha>(new Figurinha());
 
   ngOnInit(): void {
     this.album = this.createAlbum();
+
+    this.figurinhaService.selectFigurinha$.subscribe((value) => {
+      // this.selectFigurinha = value
+    });
   }
 
   public createAlbum(): Album {
@@ -58,7 +67,9 @@ export class AlbumComponent implements OnInit {
     return  figurinhas;
   }
 
-  public abrirTrocaDialog(figurinha: Figurinha){
+  public abrirTrocaDialog(figurinhaPosicionada: Figurinha){
+    this.statusFigurinha.next(figurinhaPosicionada)
+    console.log(figurinhaPosicionada);
     this.dialogService.abrirDialogSide(TrocaDialogComponent);
   }
 }
